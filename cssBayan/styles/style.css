@@ -67,11 +67,38 @@ main {
   transition: all 0.5s ease-out;
 }
 
+
+/*HOVER*/
 .input:hover + .content-icon +.img-content {
   display: block;
   transition: margin-right 2s ease-in-out .5s;
 }
 
+.input:hover + .content-icon {
+  background: url(./../img/icon/icons8-close-window-32.png) no-repeat 50%/30px 30px;
+  transition: all 0.5s ease-out;
+
+}
+
+.img-content:hover {
+ animation: hi 1s ease-out;
+
+}
+
+/*ANIMATION*/
+@keyframes hi {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1.0);
+    opacity: 1;
+  }
+}
 
 /*MEDIA*/
 @media (hover: hover) {
