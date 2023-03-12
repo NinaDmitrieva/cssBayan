@@ -17,21 +17,25 @@ main {
   border-bottom: 1px solid rgba(182, 173, 173, 0.866);
 }
 .content {
+  padding: 5px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding-bottom: 30px;
   border-bottom: 1px solid rgba(182, 173, 173, 0.866);
+  cursor: pointer;
 }
 
 .wrapper {
   display: flex;
   justify-content: space-between;
+  padding-bottom: 10px;
 }
 
 .text-content {
   display: flex;
   align-items: center;
+  font-size: 18px;
 }
 
 .btn-content {
@@ -43,4 +47,29 @@ main {
 
 .img-content {
   max-width: 350px;
+}
+
+@media screen and (max-width: 820px) {
+  .title {
+    font-size: 22px;
+    transition: all 1s ease-out;
+    padding-bottom: 15px;
+  }
+  .text-content {
+    font-size: 15px;
+    transition: all 1s ease-out;
+  }
+}
+@media screen and (max-width: 320px) {
+  .title {
+    font-size: 18px;
+    transition: all 1s ease-out;
+    text-align: center;
+  }
+
+  .text-content {
+    font-size: 12px;
+    font-weight: bold;
+    transition: all 1s ease-out;
+  }
 }
