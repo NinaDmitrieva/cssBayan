@@ -1,5 +1,46 @@
+body {
+  font-family: "Inconsolata", monospace, serif;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-body{
-      max-width: 1200px;
-  margin: auto;
+main {
+  max-width: 1920px;
+  min-width: 320px;
+}
+
+.title {
+  font-size: 32px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid rgba(182, 173, 173, 0.866);
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 30px;
+  border-bottom: 1px solid rgba(182, 173, 173, 0.866);
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.text-content {
+  display: flex;
+  align-items: center;
+}
+
+.btn-content {
+  width: 30px;
+  height: 30px;
+  align-self: center;
+  background: url(./../img/icon/icons8-open-sign-50.png) no-repeat 50%/30px 30px;
+}
+
+.img-content {
+  max-width: 350px;
 }
