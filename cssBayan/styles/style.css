@@ -23,13 +23,18 @@ main {
   justify-content: center;
   padding-bottom: 30px;
   border-bottom: 1px solid rgba(182, 173, 173, 0.866);
-  cursor: pointer;
 }
 
-.wrapper {
+.content-wrapper {
   display: flex;
   justify-content: space-between;
   padding-bottom: 10px;
+  cursor: pointer;
+}
+
+.input {
+  position: absolute; /*убираем оставшийся пробел*/
+  -webkit-appearance: none; /*если ставить display none пропадает смысл семантической разметки*/
 }
 
 .text-content {
@@ -38,7 +43,7 @@ main {
   font-size: 18px;
 }
 
-.btn-content {
+.content-icon {
   width: 30px;
   height: 30px;
   align-self: center;
@@ -47,6 +52,30 @@ main {
 
 .img-content {
   max-width: 350px;
+}
+
+
+/*CHECKED*/
+.input:checked+ .content-icon {
+  background: url(./../img/icon/icons8-close-window-32.png) no-repeat 50%/30px 30px;
+  transition: all 0.5s ease-out;
+}
+
+.input:focus+ .img-content {
+  display: block;
+  transition: all 0.5s ease-out;
+}
+
+
+/*MEDIA*/
+@media (hover: hover) {
+  .content-wrapper:hover {
+    color: rgb(180, 64, 11);
+    background: #f78e2666;
+    font-weight: bold;
+    transition: all 0.5s ease-out;
+
+  }
 }
 
 @media screen and (max-width: 820px) {
