@@ -17,33 +17,33 @@ main {
   border-bottom: 1px solid rgba(182, 173, 173, 0.866);
 }
 .content {
+  position: relative;
   padding: 5px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   padding-bottom: 30px;
   border-bottom: 1px solid rgba(182, 173, 173, 0.866);
 }
 
 .content-wrapper {
-  display: flex;
-  justify-content: space-between;
   padding-bottom: 10px;
   cursor: pointer;
 }
 
 .input {
   position: absolute; /*убираем оставшийся пробел*/
-  -webkit-appearance: none; /*если ставить display none пропадает смысл семантической разметки*/
+   -webkit-appearance: none; /*если ставить display none пропадает смысл семантической разметки */
 }
 
 .text-content {
   display: flex;
   align-items: center;
   font-size: 18px;
+  padding-bottom: 5px;
 }
 
 .content-icon {
+  position: absolute;
+  right: 5px;
+  top: 1px;
   width: 30px;
   height: 30px;
   align-self: center;
@@ -52,28 +52,35 @@ main {
 
 .img-content {
   max-width: 350px;
+  border-radius: 5px;
+  display: none;
 }
 
-
 /*CHECKED*/
-.input:checked+ .content-icon {
+.input:checked + .content-icon {
   background: url(./../img/icon/icons8-close-window-32.png) no-repeat 50%/30px 30px;
   transition: all 0.5s ease-out;
 }
 
-.input:focus+ .img-content {
+.input:checked + .content-icon +.img-content {
   display: block;
   transition: all 0.5s ease-out;
+}
+
+.input:hover + .content-icon +.img-content {
+  display: block;
+  transition: margin-right 2s ease-in-out .5s;
 }
 
 
 /*MEDIA*/
 @media (hover: hover) {
-  .content-wrapper:hover {
+  .content:hover {
     color: rgb(180, 64, 11);
     background: #f78e2666;
     font-weight: bold;
-    transition: all 0.5s ease-out;
+    transition: 0.5s ease-out;
+    border-radius: 5px;
 
   }
 }
